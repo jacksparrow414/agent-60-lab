@@ -1,0 +1,8 @@
+# agent-60-lab/.gitignore
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.DS_Store
+.idea/

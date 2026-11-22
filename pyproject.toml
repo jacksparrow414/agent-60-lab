@@ -1,0 +1,21 @@
+[project]
+name = "agent-60-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "openai>=3.57.0",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+#让 pytest 从项目根目录找模块
+[tool.pytest.ini_options]
+pythonpath = ["."]
