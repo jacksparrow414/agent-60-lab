@@ -11,6 +11,7 @@ messages: list[ChatCompletionUserMessageParam]= [
     {"role": "user", "content": "用一句话介绍你自己"}
 ]
 resp = client.chat.completions.create(
+    # 用 [] 取值,变量不存在会直接 KeyError 报错,配置漏了能马上发现
     model=os.environ["LLM_MODEL"],
     messages=messages,
     extra_body={"thinking": {"type": "disabled"}}
